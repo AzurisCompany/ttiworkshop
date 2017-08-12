@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FlightApp;assembly:FlightApp"
+             x:Class="FlightApp.Menu">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand"
+                     HorizontalOptions="FillAndExpand"
+                     Orientation="Vertical"
+                     Spacing="0">
+
+            <StackLayout Orientation="Horizontal" BackgroundColor="White" Padding="10">
+                <Image Source="{local:ImageResource FlightApp.Resources.logo.png}" HorizontalOptions="StartAndExpand" />
+                <Button Text="PT-BR" TextColor="White" WidthRequest="100" BackgroundColor="Blue"></Button>
+            </StackLayout>
+
+            <ListView ItemsSource="{x:Static local:App.Menu}" RowHeight="50">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Grid>
+                                    <StackLayout Orientation="Horizontal" BackgroundColor="#e9c813" Padding="10">
+                                        <Label Text="{Binding Description}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="#ffffff" HorizontalOptions="StartAndExpand">
+                                        </Label>
+                                        <Image Source="{Binding ImageName}" WidthRequest="50" MinimumWidthRequest="50" VerticalOptions="Center" HorizontalOptions="End"></Image>                                       
+                                    </StackLayout>
+                                </Grid>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

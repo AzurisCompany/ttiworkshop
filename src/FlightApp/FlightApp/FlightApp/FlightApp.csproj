@@ -43,10 +43,12 @@
     <Compile Include="Models\SaleSummaryModel.cs" />
     <Compile Include="Pages\DayFare.xaml.cs">
       <DependentUpon>DayFare.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\FlightChoose.xaml.cs" />
+    </Compile>   
     <Compile Include="FareChoose.xaml.cs">
       <DependentUpon>FareChoose.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FareByDay.xaml.cs">
+      <DependentUpon>FareByDay.xaml</DependentUpon>
     </Compile>
     <Compile Include="ImageResourceExtension.cs" />
     <Compile Include="MainPage.xaml.cs">
@@ -54,6 +56,10 @@
     </Compile>
     <Compile Include="Models\FareModel.cs" />
     <Compile Include="Models\FareChooseModel.cs" />
+    <Compile Include="Menu.xaml.cs">
+      <DependentUpon>Menu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Menu.cs" />
     <Compile Include="Models\FlightsModel.cs" />
     <Compile Include="Pages\PassengerData.xaml.cs">
       <DependentUpon>PassengerData.xaml</DependentUpon>
@@ -104,6 +110,27 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\airplain.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FareByDay.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Menu.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\menuItem1.png" />
+    <EmbeddedResource Include="Resources\menuItem2.png" />
+    <EmbeddedResource Include="Resources\menuItem3.png" />
+    <EmbeddedResource Include="Resources\menuItem6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\DayFare.xaml">

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FlightApp;assembly:FlightApp"
+             x:Class="FlightApp.FareByDay">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand"
+                     HorizontalOptions="FillAndExpand"
+                     Orientation="Vertical"
+                     Spacing="0">
+
+            <StackLayout Orientation="Horizontal" BackgroundColor="Silver">
+                <Label Text="Passaredo" TextColor="Gray" WidthRequest="300" VerticalTextAlignment="Center"></Label>
+                <Button Text="Menu" TextColor="Black" WidthRequest="100"></Button>
+            </StackLayout>
+
+            <StackLayout BackgroundColor="Silver">
+                <Label Text="3. Escolha seu voo" BackgroundColor="Orange" WidthRequest="300" VerticalTextAlignment="Center"></Label>
+            </StackLayout>
+
+            <StackLayout BackgroundColor="White">
+                <Label Text="Voltar" TextColor="Gray" VerticalTextAlignment="Center"></Label>
+            </StackLayout>
+
+            <StackLayout VerticalOptions="Center"
+                         
+                         Orientation="Horizontal"
+                         Spacing="0"
+                         BackgroundColor="Silver">
+                <Button HorizontalOptions="FillAndExpand" Text="PREÇO" x:Name="btnPrice" TextColor="Orange" BackgroundColor="White" WidthRequest="100"></Button>
+                <Button HorizontalOptions="FillAndExpand" Text="HORÁRIO" x:Name="btnTime" TextColor="Gray" BackgroundColor="Silver" WidthRequest="100"></Button>
+                <Button HorizontalOptions="FillAndExpand" Text="PARADAS" x:Name="btnStop" TextColor="Gray" BackgroundColor="Silver" WidthRequest="100"></Button>
+            </StackLayout>
+
+            <StackLayout BackgroundColor="Silver" Orientation="Horizontal">
+                <Label Text="Ida" TextColor="Orange" VerticalTextAlignment="Center" WidthRequest="200"></Label>
+            </StackLayout>
+
+            <ListView ItemsSource="{x:Static local:App.FlightsResults}" RowHeight="110">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Grid>
+                                    <StackLayout Orientation="Horizontal" BackgroundColor="White">
+                                        <Label Text="{Binding PartidaChegada}" TextColor="Gray" HorizontalTextAlignment="Start"></Label>
+                                        <Label Text="{Binding Valor}" VerticalTextAlignment="Center" HorizontalTextAlignment="End"></Label>
+                                    </StackLayout>
+                                </Grid>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button HorizontalOptions="FillAndExpand" Text="PRÓXIMO" x:Name="btnNext" TextColor="White" BackgroundColor="Orange" WidthRequest="100"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
