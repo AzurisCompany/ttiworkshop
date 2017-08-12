@@ -47,7 +47,7 @@ namespace FlightApp
                 }
             };
 
-            MainPage = new FlightApp.FlightChoose();
+            MainPage = new FlightApp.FareChoose();
         }
 
         protected override void OnStart()
