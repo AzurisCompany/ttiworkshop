@@ -10,6 +10,7 @@ namespace FlightApp
     public partial class App : Application
     {
         public static IList<Models.FlightsModel> FlightsResults { get; set; }
+        public static IList<Models.Menu> Menu { get; set; }
 
         public App()
         {
@@ -47,7 +48,15 @@ namespace FlightApp
                 }
             };
 
-            MainPage = new FlightApp.FlightChoose();
+            Menu = new List<Models.Menu>
+            {
+                new Models.Menu(){Description = "Reservar voos", ImageName = ImageSource.FromResource("FlightApp.Resources.menuItem1.png") },
+                new Models.Menu(){Description = "Meus voos", ImageName = ImageSource.FromResource("FlightApp.Resources.menuItem2.png")},
+                new Models.Menu(){Description = "Checkin", ImageName = ImageSource.FromResource("FlightApp.Resources.menuItem3.png")},
+                new Models.Menu(){Description = "Contato", ImageName = ImageSource.FromResource("FlightApp.Resources.menuItem6.png")}
+            };
+
+            MainPage = new FlightApp.Menu();
         }
 
         protected override void OnStart()
