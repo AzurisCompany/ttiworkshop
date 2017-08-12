@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FlightApp;assembly:FlightApp"
+             x:Class="FlightApp.Pages.DayFare">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand"
+                     HorizontalOptions="FillAndExpand"
+                     Orientation="Vertical"
+                     Spacing="0">
+
+            <StackLayout Orientation="Horizontal" BackgroundColor="Silver">
+                <Label Margin="10,0,0,0" Text="Passaredo" TextColor="Gray" WidthRequest="300" VerticalTextAlignment="Center"></Label>
+                <Button Text="Menu" TextColor="Black" WidthRequest="100"></Button>
+            </StackLayout>
+
+            <StackLayout BackgroundColor="Orange">
+                <Label Margin="10,0,0,0" Text="2. Escolha a data" WidthRequest="300" VerticalTextAlignment="Center"></Label>
+            </StackLayout>
+
+            <StackLayout BackgroundColor="White">
+                <Label Margin="10,0,0,0" Text="Voltar" TextColor="Gray" VerticalTextAlignment="Center"></Label>
+            </StackLayout>
+
+            <StackLayout BackgroundColor="Silver" Orientation="Horizontal">
+                <Label Margin="10,0,0,0" Text="Ida" TextColor="Orange" VerticalTextAlignment="Center" WidthRequest="200" FontSize="Large"></Label>
+            </StackLayout>
+
+            <ListView ItemsSource="{x:Static local:App.FlightsDayFare}" RowHeight="55">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View >
+                                <Grid>
+                                    <StackLayout Orientation="Horizontal" BackgroundColor="White">
+                                        <Label Text="{Binding Date}" Margin="10,0,0,0" HorizontalOptions="StartAndExpand"  VerticalTextAlignment="Center" HorizontalTextAlignment="Start" WidthRequest="300"></Label>
+                                        <Label Text="{Binding Price}" Margin="0,0,10,0" HorizontalOptions="EndAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="End" WidthRequest="100"></Label>
+                                    </StackLayout>
+                                </Grid>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button Margin="10" Text="Proximo" HorizontalOptions="FillAndExpand" BackgroundColor="Orange"></Button>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
