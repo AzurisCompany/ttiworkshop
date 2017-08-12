@@ -11,6 +11,7 @@ namespace FlightApp
     {
         public static IList<Models.FlightsModel> FlightsResults { get; set; }
         public static IList<Models.Menu> Menu { get; set; }
+        public static IList<Models.FlightDayFare> FlightsDayFare { get; set; }
 
         public App()
         {
@@ -48,6 +49,66 @@ namespace FlightApp
                 }
             };
 
+            FlightsDayFare = new List<Models.FlightDayFare>
+            {
+                new Models.FlightDayFare
+                {
+                    Date = "27 Jul quinta-Feira",
+                    Price = "112,49 BRL"
+                },
+                new Models.FlightDayFare
+                {
+                    Date = "28 Jul quinta-Feira",
+                    Price = "112,49 BRL"
+                },
+                new Models.FlightDayFare
+                {
+                    Date = "29 Jul quinta-Feira",
+                    Price = "112,49 BRL"
+                },
+                new Models.FlightDayFare
+                {
+                    Date = "27 Jul quinta-Feira",
+                    Price = "112,49 BRL"
+                },
+                new Models.FlightDayFare
+                {
+                    Date = "27 Jul quinta-Feira",
+                    Price = "112,49 BRL"
+                },
+                new Models.FlightDayFare
+                {
+                    Date = "27 Jul quinta-Feira",
+                    Price = "112,49 BRL"
+                },
+                new Models.FlightDayFare
+                {
+                    Date = "27 Jul quinta-Feira",
+                    Price = "112,49 BRL"
+                },
+                new Models.FlightDayFare
+                {
+                    Date = "27 Jul quinta-Feira",
+                    Price = "112,49 BRL"
+                },
+                new Models.FlightDayFare
+                {
+                    Date = "27 Jul quinta-Feira",
+                    Price = "112,49 BRL"
+                },
+                new Models.FlightDayFare
+                {
+                    Date = "27 Jul quinta-Feira",
+                    Price = "112,49 BRL"
+                },
+                new Models.FlightDayFare
+                {
+                    Date = "27 Jul quinta-Feira",
+                    Price = "112,49 BRL"
+                }
+            };
+
+            MainPage = new FlightApp.Pages.PassengerData();
             Menu = new List<Models.Menu>
             {
                 new Models.Menu(){Description = "Reservar voos", ImageName = ImageSource.FromResource("FlightApp.Resources.menuItem1.png") },
