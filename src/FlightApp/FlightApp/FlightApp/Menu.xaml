@@ -10,11 +10,11 @@
                      Spacing="0">
 
             <StackLayout Orientation="Horizontal" BackgroundColor="White" Padding="10">
-                <Image Source="{local:ImageResource FlightApp.Resources.logo.png}" HorizontalOptions="StartAndExpand" />
+                <Image Source="{local:ImageResource FlightApp.Resources.logo.png}" HorizontalOptions="StartAndExpand"/>
                 <Button Text="PT-BR" TextColor="White" WidthRequest="100" BackgroundColor="Blue"></Button>
             </StackLayout>
 
-            <ListView ItemsSource="{x:Static local:App.Menu}" RowHeight="50">
+            <ListView ItemsSource="{x:Static local:App.Menu}" RowHeight="50" ItemTapped="ListView_ItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

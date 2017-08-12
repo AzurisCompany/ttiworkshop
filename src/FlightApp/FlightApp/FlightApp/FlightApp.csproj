@@ -42,7 +42,7 @@
     <Compile Include="Models\PassengerDataModel.cs" />
     <Compile Include="Pages\DayFare.xaml.cs">
       <DependentUpon>DayFare.xaml</DependentUpon>
-    </Compile>   
+    </Compile>
     <Compile Include="FareChoose.xaml.cs">
       <DependentUpon>FareChoose.xaml</DependentUpon>
     </Compile>
@@ -60,6 +60,9 @@
     </Compile>
     <Compile Include="Models\Menu.cs" />
     <Compile Include="Models\FlightsModel.cs" />
+    <Compile Include="Pages\FlightChoose.xaml.cs">
+      <DependentUpon>FlightChoose.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\PassengerData.xaml.cs">
       <DependentUpon>PassengerData.xaml</DependentUpon>
     </Compile>
