@@ -46,7 +46,8 @@
     <Compile Include="Pages\FlightChoose.xaml.cs" />
     <Compile Include="FareChoose.xaml.cs">
       <DependentUpon>FareChoose.xaml</DependentUpon>
-    <Compile Include="Pages\FlightChoose.xaml.cs">
+    </Compile>
+    <Compile Include="Pages\FlightChoose.xaml.cs"/>
     <Compile Include="FareByDay.xaml.cs">
       <DependentUpon>FareByDay.xaml</DependentUpon>
     </Compile>
