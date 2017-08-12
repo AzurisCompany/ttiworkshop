@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlightApp.Pages.SaleSummary">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout VerticalOptions="FillAndExpand"
+                         HorizontalOptions="FillAndExpand"
+                         Orientation="Vertical"
+                         Spacing="0">
+
+                <StackLayout Orientation="Horizontal" BackgroundColor="Silver">
+                    <Label Text="Passaredo" TextColor="Gray" WidthRequest="300" VerticalTextAlignment="Center" Margin="10,0,0,0"></Label>
+                    <Button Text="Menu" TextColor="Black" WidthRequest="100"></Button>
+                </StackLayout>
+
+                <StackLayout Padding="10">
+                    <Label Text="Sua compra foi processada com sucesso."></Label>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="O localizador da reserva é:" VerticalTextAlignment="End"></Label>
+                        <Label Text="{Binding BookingReference}" TextColor="Orange" FontSize="Large"></Label>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Padding="10" Orientation="Horizontal" BackgroundColor="Silver">
+                    <Label Text="PARTIDA" TextColor="Orange" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" FontSize="Medium"></Label>
+                    <Label Text="{Binding DepartureDate}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="End" HorizontalOptions="EndAndExpand" FontSize="Medium"></Label>
+                </StackLayout>
+
+                <StackLayout Padding="10" Orientation="Vertical">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="PARTIDA" TextColor="Silver" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" ></Label>
+                        <Label Text="CHEGADA" TextColor="Silver" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"></Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="{Binding DepartureTime}"  TextColor="Black" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"></Label>
+                        <Label Text="{Binding ArrivalTime}" TextColor="Black" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"></Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="{Binding Departure}" TextColor="Black" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"></Label>
+                        <Label Text="{Binding Arrival}" TextColor="Black" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"></Label>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Padding="10" Orientation="Vertical">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="NRO DO VOO" TextColor="Silver" VerticalTextAlignment="Center" WidthRequest="200"></Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="{Binding FlightNumber}" TextColor="Black" VerticalTextAlignment="Center" WidthRequest="200"></Label>
+                    </StackLayout>
+                </StackLayout>
+
+                <BoxView Color="Gray" HeightRequest="1"></BoxView>
+
+                <StackLayout Padding="10" Orientation="Vertical">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="TICKET" TextColor="Silver" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" WidthRequest="200"></Label>
+                        <Label Text="PASSAGEIRO" TextColor="Silver" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" WidthRequest="200"></Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="{Binding Ticket}"  TextColor="Black" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" WidthRequest="200"></Label>
+                        <Label Text="{Binding Passenger.FullName}" TextColor="Black" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" WidthRequest="200"></Label>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Padding="10" Orientation="Horizontal" BackgroundColor="Silver">
+                    <Label Text="PAGAMENTO" TextColor="Orange" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" FontSize="Medium"></Label>
+                </StackLayout>
+
+                <StackLayout Padding="10" Orientation="Vertical">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="FORMA DE PAGAMENTO" TextColor="Silver" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" WidthRequest="200"></Label>
+                        <Label Text="NÚMERO DE PARCELAS" TextColor="Silver" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" WidthRequest="200"></Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="{Binding PaymentForm}"  TextColor="Black" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" WidthRequest="200"></Label>
+                        <Label Text="{Binding NumberOfInstallment}" TextColor="Black" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" WidthRequest="200"></Label>
+                    </StackLayout>
+                </StackLayout>
+
+                <BoxView Color="Gray" HeightRequest="1"></BoxView>
+
+                <StackLayout Padding="10" Orientation="Vertical">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="VALOR DA PARCELA" TextColor="Silver" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" WidthRequest="200" ></Label>
+                        <Label Text="TOTAL GERAL" TextColor="Silver" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" WidthRequest="200"></Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="{Binding InstallmentAmount}" TextColor="Black" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" WidthRequest="200"></Label>
+                        <Label Text="{Binding SalesAmount}" TextColor="Black" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" WidthRequest="200"></Label>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Padding="10" Orientation="Horizontal" BackgroundColor="Silver">
+                    <Label Text="LOCALIZADOR DA RESERVA" TextColor="Orange" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" FontSize="Medium"></Label>
+                    <Label Text="{Binding BookingReference}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="End" HorizontalOptions="EndAndExpand" FontSize="Medium"></Label>
+                </StackLayout>
+
+                <Label Margin="10" Text="EM ATENDIMENTO Á LEI 12.741/2012, A PASSAREDO INFORMA QUE O PERCENTUAL DOS TRIBUTOS INCIDENTES SOBRE OS SERVIÇOS DE TRANSPORTE AÉREO NACIONAL É DE PIS 0,68% E COFINS 3,00%."></Label>
+
+                <BoxView Color="Gray" HeightRequest="1"></BoxView>
+
+                <Button Margin="10" Text="INFORMAÇÕES DE CHECK-IN" HorizontalOptions="FillAndExpand" BackgroundColor="Orange"></Button>
+            
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

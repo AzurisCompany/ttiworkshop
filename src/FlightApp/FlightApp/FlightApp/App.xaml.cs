@@ -108,8 +108,7 @@ namespace FlightApp
                 }
             };
 
-            MainPage = new FlightApp.FareChoose();
-            MainPage = new FlightApp.Pages.PassengerData();
+         
             Menu = new List<Models.Menu>
             {
                 new Models.Menu(){Description = "Reservar voos", ImageName = ImageSource.FromResource("FlightApp.Resources.menuItem1.png") },
