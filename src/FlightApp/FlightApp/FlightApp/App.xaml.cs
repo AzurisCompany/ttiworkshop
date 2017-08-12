@@ -107,7 +107,7 @@ namespace FlightApp
                 }
             };
 
-            MainPage = new FlightApp.Pages.DayFare();
+            MainPage = new FlightApp.Pages.PassengerData();
         }
 
         protected override void OnStart()

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlightApp.Pages.PassengerData">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand"
+                     HorizontalOptions="FillAndExpand"
+                     Orientation="Vertical"
+                     Spacing="0">
+
+            <StackLayout Orientation="Horizontal" BackgroundColor="Silver">
+                <Label Margin="10,0,0,0" Text="Passaredo" TextColor="Gray" WidthRequest="300" VerticalTextAlignment="Center"></Label>
+                <Button Text="Menu" TextColor="Black" WidthRequest="100"></Button>
+            </StackLayout>
+
+            <StackLayout BackgroundColor="Orange" HeightRequest="30" Orientation="Horizontal">
+                <Label Margin="10,0,0,0" Text="5. Dados dos passageiros" VerticalTextAlignment="Center"></Label>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" BackgroundColor="White" HeightRequest="30">
+                <Label Margin="10,0,0,0" Text="Voltar" TextColor="Gray" HorizontalOptions="StartAndExpand" VerticalTextAlignment="Center"></Label>
+                <Label Margin="0,0,10,0" Text="Carrinho de compras" TextColor="Gray" HorizontalOptions="EndAndExpand" VerticalTextAlignment="Center"></Label>
+            </StackLayout>
+
+            <StackLayout BackgroundColor="Silver" Orientation="Horizontal" HeightRequest="40">
+                <Label Margin="10,0,0,0" Text="Passageiro (1)" TextColor="Orange" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" FontSize="Large"></Label>
+                <Label Margin="0,0,10,0" Text="Adulto" TextColor="Gray" HorizontalOptions="EndAndExpand" VerticalTextAlignment="Center" FontSize="Large"></Label>
+            </StackLayout>
+
+            <StackLayout Spacing="15" Padding="10">
+                <Entry Text="{Binding Name}" Placeholder="Nome"></Entry>
+                <Entry Text="{Binding Surname}" Placeholder="Sobrenome"></Entry>
+                <Entry Text="{Binding Email}" Placeholder="Email" Keyboard="Email"></Entry>
+                <DatePicker VerticalOptions="StartAndExpand" Date="{Binding Birthdate}">
+                    <DatePicker.Format>dd-MM-yyyy</DatePicker.Format>
+                </DatePicker>
+                <StackLayout Orientation="Horizontal">
+                    <Entry Text="{Binding AreaCode}" Placeholder="DDD" WidthRequest="100" Keyboard="Numeric"></Entry>
+                    <Entry Text="{Binding Phone}" Placeholder="Telefone" WidthRequest="300" Keyboard="Telephone"></Entry>
+                </StackLayout>
+            </StackLayout>
+            <Button Margin="10" Text="Proximo" HorizontalOptions="FillAndExpand" BackgroundColor="Orange"></Button>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
