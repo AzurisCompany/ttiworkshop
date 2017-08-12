@@ -108,6 +108,7 @@ namespace FlightApp
                 }
             };
 
+            MainPage = new FlightApp.FareChoose();
             MainPage = new FlightApp.Pages.PassengerData();
             Menu = new List<Models.Menu>
             {
