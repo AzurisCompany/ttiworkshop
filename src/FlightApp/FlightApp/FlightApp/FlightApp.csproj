@@ -43,12 +43,9 @@
     <Compile Include="Pages\DayFare.xaml.cs">
       <DependentUpon>DayFare.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\FlightChoose.xaml.cs">
+    <Compile Include="Pages\FlightChoose.xaml.cs" />
     <Compile Include="FareChoose.xaml.cs">
       <DependentUpon>FareChoose.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="FlightChoose.xaml.cs">
-      <DependentUpon>FlightChoose.xaml</DependentUpon>
     </Compile>
     <Compile Include="ImageResourceExtension.cs" />
     <Compile Include="MainPage.xaml.cs">
