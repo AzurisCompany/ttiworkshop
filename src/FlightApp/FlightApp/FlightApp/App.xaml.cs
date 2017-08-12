@@ -107,7 +107,7 @@ namespace FlightApp
                 }
             };
 
-            MainPage = new FlightApp.FareChoose();
+            MainPage = new FlightApp.Pages.SaleSummary();
         }
 
         protected override void OnStart()
