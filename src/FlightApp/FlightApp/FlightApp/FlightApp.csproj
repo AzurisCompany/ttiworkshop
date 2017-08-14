@@ -47,9 +47,6 @@
     <Compile Include="Pages\FareChoose.xaml.cs">
       <DependentUpon>FareChoose.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\FareByDay.xaml.cs">
-      <DependentUpon>FareByDay.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ImageResourceExtension.cs" />
     <Compile Include="Models\FareModel.cs" />
     <Compile Include="Models\FareChooseModel.cs" />
@@ -74,7 +71,6 @@
       <DependentUpon>Resource.resx</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\DayFareViewModel.cs" />
-    <Compile Include="ViewModels\FareByDayViewModel.cs" />
     <Compile Include="ViewModels\FareChooseViewModel.cs" />
     <Compile Include="ViewModels\FlightChooseViewModel.cs" />
     <Compile Include="ViewModels\MenuViewModel.cs" />
@@ -113,12 +109,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\airplain.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Pages\FareByDay.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\Menu.xaml">
