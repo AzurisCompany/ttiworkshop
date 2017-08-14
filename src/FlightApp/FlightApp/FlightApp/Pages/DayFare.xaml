@@ -26,7 +26,7 @@
                 <Label Margin="10,0,0,0" Text="Ida" TextColor="Orange" VerticalTextAlignment="Center" WidthRequest="200" FontSize="Large"></Label>
             </StackLayout>
 
-            <ListView ItemsSource="{x:Static local:App.FlightsDayFare}" RowHeight="55">
+            <ListView ItemsSource="{Binding FlightsDayFare}" RowHeight="55">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

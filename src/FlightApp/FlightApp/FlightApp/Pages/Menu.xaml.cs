@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using FlightApp.ViewModels;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace FlightApp
+namespace FlightApp.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Menu : ContentPage
@@ -15,6 +11,7 @@ namespace FlightApp
         public Menu()
         {
             InitializeComponent();
+            BindingContext = new MenuViewModel();
         }
 
         async void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
@@ -24,7 +21,7 @@ namespace FlightApp
             switch (menu.Description)
             {
                 case "Reservar voos":
-                    await Navigation.PushAsync(new Pages.FlightChoose());
+                    await Navigation.PushAsync(new Pages.DayFare());
                     break;
                 case "Meus voos":
                     throw new NotImplementedException();

@@ -10,7 +10,7 @@ namespace FlightApp.Pages
         public DayFare()
         {
             InitializeComponent();
-            BindingContext = new FareByDayViewModel();
+            BindingContext = new DayFareViewModel();
         }
     }
 }
