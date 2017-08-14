@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace FlightApp.Models
 {
@@ -21,10 +17,5 @@ namespace FlightApp.Models
         public string FlightNumber { get; set; }
 
         public List<FareModel> Fares { get; set; }
-
-        public FareChooseModel()
-        {
-            Fares = new List<FareModel>();
-        }
     }
 }

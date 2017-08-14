@@ -43,7 +43,7 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-            <Button Margin="10" Text="Proximo" HorizontalOptions="FillAndExpand" BackgroundColor="Orange"></Button>
+            <Button Margin="10" Text="Proximo" HorizontalOptions="FillAndExpand" BackgroundColor="Orange" Command="{Binding NextButtonCommand}"></Button>
             
         </StackLayout>
     </ContentPage.Content>

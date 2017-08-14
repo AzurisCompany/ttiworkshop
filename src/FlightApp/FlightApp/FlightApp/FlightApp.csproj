@@ -44,16 +44,13 @@
     <Compile Include="Pages\DayFare.xaml.cs">
       <DependentUpon>DayFare.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FareChoose.xaml.cs">
+    <Compile Include="Pages\FareChoose.xaml.cs">
       <DependentUpon>FareChoose.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FareByDay.xaml.cs">
+    <Compile Include="Pages\FareByDay.xaml.cs">
       <DependentUpon>FareByDay.xaml</DependentUpon>
     </Compile>
     <Compile Include="ImageResourceExtension.cs" />
-    <Compile Include="MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Models\FareModel.cs" />
     <Compile Include="Models\FareChooseModel.cs" />
     <Compile Include="Menu.xaml.cs">
@@ -76,12 +73,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource.resx</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\FareByDayViewModel.cs" />
+    <Compile Include="ViewModels\FareChooseViewModel.cs" />
+    <Compile Include="ViewModels\FlightChooseViewModel.cs" />
+    <Compile Include="ViewModels\PassengerDataViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="MainPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Include="App.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -115,7 +112,7 @@
     <EmbeddedResource Include="Resources\airplain.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FareByDay.xaml">
+    <EmbeddedResource Include="Pages\FareByDay.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -148,7 +145,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FareChoose.xaml">
+    <EmbeddedResource Include="Pages\FareChoose.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

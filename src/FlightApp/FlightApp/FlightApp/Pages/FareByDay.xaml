@@ -2,8 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:FlightApp;assembly:FlightApp"
-             x:Class="FlightApp.FareByDay">
+             x:Class="FlightApp.Pages.FareByDay">
     <ContentPage.Content>
+        
         <StackLayout VerticalOptions="FillAndExpand"
                      HorizontalOptions="FillAndExpand"
                      Orientation="Vertical"
@@ -36,7 +37,7 @@
                 <Label Text="Ida" TextColor="Orange" VerticalTextAlignment="Center" WidthRequest="200"></Label>
             </StackLayout>
 
-            <ListView ItemsSource="{x:Static local:App.FlightsResults}" RowHeight="110">
+            <ListView ItemsSource="{Binding Flights}" RowHeight="110">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -53,7 +54,8 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-            <Button HorizontalOptions="FillAndExpand" Text="PRÓXIMO" x:Name="btnNext" TextColor="White" BackgroundColor="Orange" WidthRequest="100"></Button>
+            <Button HorizontalOptions="FillAndExpand" Text="PRÓXIMO" x:Name="btnNext" TextColor="White" BackgroundColor="Orange" WidthRequest="100" Command="{Binding NextButtonCommand}"></Button>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

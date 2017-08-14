@@ -4,10 +4,10 @@
              xmlns:local="clr-namespace:FlightApp;assembly:FlightApp"
              x:Class="FlightApp.Pages.FlightChoose">
     <ContentPage.Padding>
-        <OnPlatform x:TypeArguments="Thickness"
+        <!--<OnPlatform x:TypeArguments="Thickness"
                     iOS="20, 40, 20, 20"
                     Android="20, 20, 20, 20"
-                    WinPhone="20, 20, 20, 20" />
+                    WinPhone="20, 20, 20, 20" />-->
     </ContentPage.Padding>
     <ContentPage.Content>
         <StackLayout VerticalOptions="FillAndExpand"
@@ -28,8 +28,7 @@
                 <Label Text="Voltar" TextColor="Gray" VerticalTextAlignment="Center"></Label>
             </StackLayout>
 
-            <StackLayout VerticalOptions="Center"
-                         
+            <StackLayout VerticalOptions="Center"                         
                          Orientation="Horizontal"
                          Spacing="0"
                          BackgroundColor="Silver">
@@ -43,7 +42,7 @@
                 <Label Text="28 JulSexta-Feira" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="End" WidthRequest="200"></Label>
             </StackLayout>
 
-            <ListView ItemsSource="{x:Static local:App.FlightsResults}" RowHeight="110">
+            <ListView ItemsSource="{Binding Flights}" RowHeight="110">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -65,6 +64,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate> 
             </ListView>
+            <Button Text="PRÓXIMO" x:Name="btnNext" TextColor="Orange" BackgroundColor="White" WidthRequest="100"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

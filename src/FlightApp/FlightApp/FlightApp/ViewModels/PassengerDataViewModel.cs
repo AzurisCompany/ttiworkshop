@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace FlightApp.Models
+namespace FlightApp.ViewModels
 {
-    public class PassengerDataModel
+    public class PassengerDataViewModel
     {
         public string Name { get; set; }
         public string Surname { get; set; }
@@ -11,11 +11,8 @@ namespace FlightApp.Models
         public string AreaCode { get; set; }
         public string Phone { get; set; }
 
-        public string FullName { get { return string.Format("{0} {1}", Name, Surname); } }
-
-        public PassengerDataModel()
+        public PassengerDataViewModel()
         {
-            Birthdate = DateTime.Now;
         }
     }
 }

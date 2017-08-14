@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:FlightApp;assembly:FlightApp"
-             x:Class="FlightApp.FareChoose">
+             x:Class="FlightApp.Pages.FareChoose">
     <ContentPage.Padding>
     </ContentPage.Padding>
     <ContentPage.Content>
