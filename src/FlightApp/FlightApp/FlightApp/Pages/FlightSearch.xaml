@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlightApp.Pages.FlightSearch">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="btIda" WidthRequest="150" BackgroundColor="White" TextColor="Gold" Text="Apenas ida" HorizontalOptions="StartAndExpand"></Button>
+                <Button x:Name="btIdaEVolta" WidthRequest="150" BackgroundColor="LightGray" TextColor="Gray" Text="Ida e volta" HorizontalOptions="EndAndExpand"></Button>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Entry x:Name="Departure" WidthRequest="150" Placeholder="De" HorizontalOptions="StartAndExpand"></Entry>
+                <Entry x:Name="Arrival" WidthRequest="150" Placeholder="Para" HorizontalOptions="EndAndExpand"></Entry>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical">
+                <DatePicker x:Name="DepartureDate" Format="dd/MM/yyyy" HorizontalOptions="FillAndExpand"></DatePicker>
+                <DatePicker x:Name="ArrivalDate" Format="dd/MM/yyyy"  HorizontalOptions="FillAndExpand"></DatePicker>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="número de adultos"></Label>
+                    <Entry x:Name="txtNumberOfAdults" Text="1"></Entry>
+                    <Stepper Value="1" Minimum="1" Maximum="9" Increment="1" x:Name="stpAdults" HorizontalOptions="EndAndExpand"></Stepper>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Número de crianças"></Label>
+                    <Entry x:Name="txtChild" Text="0"></Entry>
+                    <Stepper Value="0" Minimum="1" Maximum="9" Increment="1" x:Name="stpChild" HorizontalOptions="EndAndExpand"></Stepper>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="número de bebes"></Label>
+                    <Entry x:Name="txtInfant" Text="0"></Entry>
+                    <Stepper Value="0" Minimum="1" Maximum="9" Increment="1" x:Name="stpInfant" HorizontalOptions="EndAndExpand"></Stepper>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Pesquisar" TextColor="White" BackgroundColor="Gold" HorizontalOptions="FillAndExpand"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:FlightApp;assembly:FlightApp"
+             xmlns:local="clr-namespace:FlightApp.Extensions;assembly:FlightApp"
              x:Class="FlightApp.Pages.FareChoose">
     <ContentPage.Padding>
     </ContentPage.Padding>
@@ -18,7 +18,7 @@
             
             <StackLayout BackgroundColor="Silver" Orientation="Vertical" Spacing="15" Padding="10">
                 <StackLayout Orientation="Horizontal">
-                        <Label Text="IDA" TextColor="Orange" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" FontSize="Medium"></Label>
+                        <Label Text="IDA" TextColor="#e9c813" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" FontSize="Medium"></Label>
                     <Label Text="{Binding DepartureDate}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="End" HorizontalOptions="EndAndExpand" FontSize="Medium"></Label>
                 </StackLayout>
                 <StackLayout Orientation="Vertical">
@@ -31,8 +31,8 @@
                         <Label Text="{Binding ArrivalTime}" TextColor="Black" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"></Label>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
-                        <Label Text="{Binding Departure}" TextColor="Orange" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"></Label>
-                        <Label Text="{Binding Arrival}" TextColor="Orange" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"></Label>
+                        <Label Text="{Binding Departure}" TextColor="#e9c813" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"></Label>
+                        <Label Text="{Binding Arrival}" TextColor="#e9c813" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"></Label>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Orientation="Vertical">

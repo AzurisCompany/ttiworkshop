@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:FlightApp;assembly:FlightApp"
+             xmlns:local="clr-namespace:FlightApp.Extensions;assembly:FlightApp"
              x:Class="FlightApp.Pages.PassengerData">
     <ContentPage.Content>
         <StackLayout VerticalOptions="FillAndExpand"
@@ -14,7 +14,7 @@
                 <Button Text="Menu" TextColor="Black" WidthRequest="100" Command="{Binding MenuButtonCommand}"></Button>
             </StackLayout>
 
-            <StackLayout BackgroundColor="Orange" HeightRequest="30" Orientation="Horizontal">
+            <StackLayout BackgroundColor="#e9c813" HeightRequest="30" Orientation="Horizontal">
                 <Label Margin="10,0,0,0" Text="5. Dados dos passageiros" VerticalTextAlignment="Center"></Label>
             </StackLayout>
 
@@ -24,7 +24,7 @@
             </StackLayout>
 
             <StackLayout BackgroundColor="Silver" Orientation="Horizontal" HeightRequest="40">
-                <Label Margin="10,0,0,0" Text="Passageiro (1)" TextColor="Orange" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" FontSize="Large"></Label>
+                <Label Margin="10,0,0,0" Text="Passageiro (1)" TextColor="#e9c813" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" FontSize="Large"></Label>
                 <Label Margin="0,0,10,0" Text="Adulto" TextColor="Gray" HorizontalOptions="EndAndExpand" VerticalTextAlignment="Center" FontSize="Large"></Label>
             </StackLayout>
 
@@ -40,7 +40,7 @@
                     <Entry Text="{Binding Phone}" Placeholder="Telefone" WidthRequest="300" Keyboard="Telephone"></Entry>
                 </StackLayout>
             </StackLayout>
-            <Button Margin="10" Text="Proximo" HorizontalOptions="FillAndExpand" BackgroundColor="Orange"></Button>
+            <Button Margin="10" Text="Proximo" HorizontalOptions="FillAndExpand" BackgroundColor="#e9c813"></Button>
 
         </StackLayout>
     </ContentPage.Content>

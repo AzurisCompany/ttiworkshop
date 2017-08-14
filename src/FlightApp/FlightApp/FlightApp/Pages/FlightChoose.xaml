@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:FlightApp;assembly:FlightApp"
+             xmlns:local="clr-namespace:FlightApp.Extensions;assembly:FlightApp"
              x:Class="FlightApp.Pages.FlightChoose">
     <ContentPage.Padding>
         <!--<OnPlatform x:TypeArguments="Thickness"
@@ -21,24 +21,20 @@
             </StackLayout>
 
             <StackLayout BackgroundColor="Silver">
-                <Label Text="3. Escolha seu voo" BackgroundColor="Orange" WidthRequest="300" VerticalTextAlignment="Center"></Label>
-            </StackLayout>
-
-            <StackLayout BackgroundColor="White">
-                <Label Text="Voltar" TextColor="Gray" VerticalTextAlignment="Center"></Label>
+                <Label Text="3. Escolha seu voo" BackgroundColor="#e9c813" WidthRequest="300" VerticalTextAlignment="Center"></Label>
             </StackLayout>
 
             <StackLayout VerticalOptions="Center"                         
                          Orientation="Horizontal"
                          Spacing="0"
                          BackgroundColor="Silver">
-                <Button Text="PREÇO" x:Name="btnPrice" TextColor="Orange" BackgroundColor="White" WidthRequest="100"></Button>
-                <Button Text="HORÁRIO" x:Name="btnTime" TextColor="Gray" BackgroundColor="Silver" WidthRequest="100"></Button>
-                <Button Text="PARADAS" x:Name="btnStop" TextColor="Gray" BackgroundColor="Silver" WidthRequest="100"></Button>
+                <Button Text="PREÇO" x:Name="btnPrice" TextColor="#e9c813" BackgroundColor="White" WidthRequest="100" HorizontalOptions="FillAndExpand" ></Button>
+                <Button Text="HORÁRIO" x:Name="btnTime" TextColor="Gray" BackgroundColor="Silver" WidthRequest="100" HorizontalOptions="FillAndExpand"></Button>
+                <Button Text="PARADAS" x:Name="btnStop" TextColor="Gray" BackgroundColor="Silver" WidthRequest="100" HorizontalOptions="FillAndExpand"></Button>
             </StackLayout>
 
             <StackLayout BackgroundColor="Silver" Orientation="Horizontal">
-                <Label Text="Ida" TextColor="Orange" VerticalTextAlignment="Center" WidthRequest="200"></Label>
+                <Label Text="Ida" TextColor="#e9c813" VerticalTextAlignment="Center" WidthRequest="200"></Label>
                 <Label Text="28 JulSexta-Feira" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="End" WidthRequest="200"></Label>
             </StackLayout>
 
@@ -53,7 +49,7 @@
                                         <StackLayout Orientation="Vertical" WidthRequest="300">
                                             <Label Text="{Binding OrigemDestino}" TextColor="Gray"></Label>
                                             <Label Text="{Binding PartidaChegada}" TextColor="Gray"></Label>
-                                            <Label Text="{Binding TipoVoo}" TextColor="Orange"></Label>
+                                            <Label Text="{Binding TipoVoo}" TextColor="#e9c813"></Label>
                                             <Label Text="{Binding Observacao}" TextColor="Gray"></Label>
                                         </StackLayout>
                                         <Label Text="{Binding Valor}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" WidthRequest="100"></Label>
@@ -64,7 +60,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate> 
             </ListView>
-            <Button Text="PRÓXIMO" x:Name="btnNext" TextColor="Orange" BackgroundColor="White" WidthRequest="100"></Button>
+            <Button Text="PRÓXIMO" x:Name="btnNext" TextColor="White" BackgroundColor="#e9c813" WidthRequest="100"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

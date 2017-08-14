@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:FlightApp;assembly:FlightApp"
+             xmlns:local="clr-namespace:FlightApp.Extensions;assembly:FlightApp"
              x:Class="FlightApp.Pages.DayFare">
     <ContentPage.Content>
         <StackLayout VerticalOptions="FillAndExpand"
@@ -14,7 +14,7 @@
                 <Button Text="Menu" TextColor="Black" WidthRequest="100" Command="{Binding MenuButtonCommand}"></Button>
             </StackLayout>
 
-            <StackLayout BackgroundColor="Orange">
+            <StackLayout BackgroundColor="#e9c813">
                 <Label Margin="10,0,0,0" Text="2. Escolha a data" WidthRequest="300" VerticalTextAlignment="Center"></Label>
             </StackLayout>
 
@@ -23,7 +23,7 @@
             </StackLayout>
 
             <StackLayout BackgroundColor="Silver" Orientation="Horizontal">
-                <Label Margin="10,0,0,0" Text="Ida" TextColor="Orange" VerticalTextAlignment="Center" WidthRequest="200" FontSize="Large"></Label>
+                <Label Margin="10,0,0,0" Text="Ida" TextColor="#e9c813" VerticalTextAlignment="Center" WidthRequest="200" FontSize="Large"></Label>
             </StackLayout>
 
             <ListView ItemsSource="{Binding FlightsDayFare}" RowHeight="55">
@@ -43,7 +43,7 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-            <Button Margin="10" Text="Proximo" HorizontalOptions="FillAndExpand" BackgroundColor="Orange" Command="{Binding NextButtonCommand}"></Button>
+            <Button Margin="10" Text="Proximo" HorizontalOptions="FillAndExpand" BackgroundColor="#e9c813" Command="{Binding NextButtonCommand}"></Button>
             
         </StackLayout>
     </ContentPage.Content>

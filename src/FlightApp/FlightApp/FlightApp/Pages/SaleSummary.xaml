@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            xmlns:local="clr-namespace:FlightApp;assembly:FlightApp"
+             xmlns:local="clr-namespace:FlightApp.Extensions;assembly:FlightApp"
              x:Class="FlightApp.Pages.SaleSummary">
     <ContentPage.Content>
         <ScrollView>
@@ -19,12 +19,12 @@
                     <Label Text="Sua compra foi processada com sucesso."></Label>
                     <StackLayout Orientation="Horizontal">
                         <Label Text="O localizador da reserva é:" VerticalTextAlignment="End"></Label>
-                        <Label Text="{Binding BookingReference}" TextColor="Orange" FontSize="Large"></Label>
+                        <Label Text="{Binding BookingReference}" TextColor="#e9c813" FontSize="Large"></Label>
                     </StackLayout>
                 </StackLayout>
 
                 <StackLayout Padding="10" Orientation="Horizontal" BackgroundColor="Silver">
-                    <Label Text="PARTIDA" TextColor="Orange" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" FontSize="Medium"></Label>
+                    <Label Text="PARTIDA" TextColor="#e9c813" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" FontSize="Medium"></Label>
                     <Label Text="{Binding DepartureDate}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="End" HorizontalOptions="EndAndExpand" FontSize="Medium"></Label>
                 </StackLayout>
 
@@ -66,7 +66,7 @@
                 </StackLayout>
 
                 <StackLayout Padding="10" Orientation="Horizontal" BackgroundColor="Silver">
-                    <Label Text="PAGAMENTO" TextColor="Orange" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" FontSize="Medium"></Label>
+                    <Label Text="PAGAMENTO" TextColor="#e9c813" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" FontSize="Medium"></Label>
                 </StackLayout>
 
                 <StackLayout Padding="10" Orientation="Vertical">
@@ -94,7 +94,7 @@
                 </StackLayout>
 
                 <StackLayout Padding="10" Orientation="Horizontal" BackgroundColor="Silver">
-                    <Label Text="LOCALIZADOR DA RESERVA" TextColor="Orange" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" FontSize="Medium"></Label>
+                    <Label Text="LOCALIZADOR DA RESERVA" TextColor="#e9c813" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" FontSize="Medium"></Label>
                     <Label Text="{Binding BookingReference}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="End" HorizontalOptions="EndAndExpand" FontSize="Medium"></Label>
                 </StackLayout>
 
@@ -102,7 +102,7 @@
 
                 <BoxView Color="Gray" HeightRequest="1"></BoxView>
 
-                <Button Margin="10" Text="INFORMAÇÕES DE CHECK-IN" HorizontalOptions="FillAndExpand" BackgroundColor="Orange"></Button>
+                <Button Margin="10" Text="INFORMAÇÕES DE CHECK-IN" HorizontalOptions="FillAndExpand" BackgroundColor="#e9c813"></Button>
             
             </StackLayout>
         </ScrollView>
