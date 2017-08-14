@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FlightApp;assembly:FlightApp"
              x:Class="FlightApp.Pages.PassengerData">
     <ContentPage.Content>
         <StackLayout VerticalOptions="FillAndExpand"
@@ -8,9 +9,9 @@
                      Orientation="Vertical"
                      Spacing="0">
 
-            <StackLayout Orientation="Horizontal" BackgroundColor="Silver">
-                <Label Margin="10,0,0,0" Text="Passaredo" TextColor="Gray" WidthRequest="300" VerticalTextAlignment="Center"></Label>
-                <Button Text="Menu" TextColor="Black" WidthRequest="100"></Button>
+            <StackLayout Orientation="Horizontal" BackgroundColor="White" Padding="10">
+                <Image Source="{local:ImageResource FlightApp.Resources.logo.png}" HorizontalOptions="StartAndExpand"/>
+                <Button Text="Menu" TextColor="Black" WidthRequest="100" Command="{Binding MenuButtonCommand}"></Button>
             </StackLayout>
 
             <StackLayout BackgroundColor="Orange" HeightRequest="30" Orientation="Horizontal">

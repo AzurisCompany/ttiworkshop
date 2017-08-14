@@ -11,9 +11,13 @@ namespace FlightApp.ViewModels
 
         public Command NextButtonCommand { get; set; }
 
+        public Command MenuButtonCommand { get; set; }
+
         public DayFareViewModel()
         {
             NextButtonCommand = new Command(NextButtonCommandExecute);
+
+            MenuButtonCommand = new Command(MenuButtonCommandExecute);
 
             FlightsDayFare = new ObservableCollection<FlightDayFare>
             {
@@ -78,6 +82,11 @@ namespace FlightApp.ViewModels
         private async void NextButtonCommandExecute()
         {
             await App.Current.MainPage.Navigation.PushAsync(new FlightChoose());
+        }
+
+        private async void MenuButtonCommandExecute()
+        {
+            await App.Current.MainPage.Navigation.PushAsync(new Pages.Menu());
         }
     }
 }

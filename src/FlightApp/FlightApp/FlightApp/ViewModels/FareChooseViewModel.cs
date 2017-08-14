@@ -1,5 +1,6 @@
 ﻿using FlightApp.Models;
 using System.Collections.Generic;
+using Xamarin.Forms;
 
 namespace FlightApp.ViewModels
 {
@@ -19,8 +20,12 @@ namespace FlightApp.ViewModels
 
         public List<FareModel> Fares { get; set; }
 
+        public Command MenuButtonCommand { get; set; }
+
         public FareChooseViewModel()
-        {           
+        {
+            MenuButtonCommand = new Command(MenuButtonCommandExecute);
+
             var fareList = new List<FareModel>();
             fareList.Add(new FareModel()
             {
@@ -54,6 +59,11 @@ namespace FlightApp.ViewModels
             DepartureTime = "11:00";
             FlightNumber = "2267";
             Fares = fareList;
+        }
+
+        private async void MenuButtonCommandExecute()
+        {
+            await App.Current.MainPage.Navigation.PushAsync(new Pages.Menu());
         }
     }
 }

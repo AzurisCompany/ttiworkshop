@@ -11,7 +11,6 @@
 
             <StackLayout Orientation="Horizontal" BackgroundColor="White" Padding="10">
                 <Image Source="{local:ImageResource FlightApp.Resources.logo.png}" HorizontalOptions="StartAndExpand"/>
-                <Button Text="PT-BR" TextColor="White" WidthRequest="100" BackgroundColor="Blue"></Button>
             </StackLayout>
 
             <ListView ItemsSource="{Binding MenuList}" RowHeight="50" ItemTapped="ListView_ItemTapped">

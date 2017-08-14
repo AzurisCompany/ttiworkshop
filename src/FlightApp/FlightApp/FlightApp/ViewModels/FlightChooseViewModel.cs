@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
+using Xamarin.Forms;
 
 namespace FlightApp.ViewModels
 {
@@ -7,8 +7,12 @@ namespace FlightApp.ViewModels
     {
         public ObservableCollection<Models.FlightsModel> Flights { get; set; }
 
+        public Command MenuButtonCommand { get; set; }
+
         public FlightChooseViewModel()
         {
+            MenuButtonCommand = new Command(MenuButtonCommandExecute);
+
             Flights = new ObservableCollection<Models.FlightsModel>
             {
                 new Models.FlightsModel(){
@@ -40,6 +44,11 @@ namespace FlightApp.ViewModels
                     Valor = "BRL 112.49"
                 }
             };
+        }
+
+        private async void MenuButtonCommandExecute()
+        {
+            await App.Current.MainPage.Navigation.PushAsync(new Pages.Menu());
         }
     }
 }

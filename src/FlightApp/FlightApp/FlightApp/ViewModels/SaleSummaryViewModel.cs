@@ -1,4 +1,5 @@
 ﻿using FlightApp.Models;
+using Xamarin.Forms;
 
 namespace FlightApp.ViewModels
 {
@@ -30,8 +31,12 @@ namespace FlightApp.ViewModels
 
         public string SalesAmount { get; set; }
 
+        public Command MenuButtonCommand { get; set; }
+
         public SaleSummaryViewModel()
         {
+            MenuButtonCommand = new Command(MenuButtonCommandExecute);
+
             BookingReference = "0ESYD7";
             DepartureDate = "28 julSexta-Feira";
             DepartureTime = "11:00";
@@ -49,6 +54,11 @@ namespace FlightApp.ViewModels
             NumberOfInstallment = "1 parcela(s)";
             InstallmentAmount = "112,49 BRL";
             SalesAmount = "112,49 BRL";
+        }
+
+        private async void MenuButtonCommandExecute()
+        {
+            await App.Current.MainPage.Navigation.PushAsync(new Pages.Menu());
         }
     }
 }

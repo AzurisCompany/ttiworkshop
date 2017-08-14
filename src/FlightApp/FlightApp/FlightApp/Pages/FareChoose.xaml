@@ -11,10 +11,11 @@
                      Orientation="Vertical"
                      Spacing="0">
 
-            <StackLayout Orientation="Horizontal" BackgroundColor="Silver">
-                <Label Text="Passaredo" TextColor="Gray" WidthRequest="300" VerticalTextAlignment="Center" Margin="10,0,0,0"></Label>
-                <Button Text="Menu" TextColor="Black" WidthRequest="100"></Button>
+            <StackLayout Orientation="Horizontal" BackgroundColor="White" Padding="10">
+                <Image Source="{local:ImageResource FlightApp.Resources.logo.png}" HorizontalOptions="StartAndExpand"/>
+                <Button Text="Menu" TextColor="Black" WidthRequest="100" Command="{Binding MenuButtonCommand}"></Button>
             </StackLayout>
+            
             <StackLayout BackgroundColor="Silver" Orientation="Vertical" Spacing="15" Padding="10">
                 <StackLayout Orientation="Horizontal">
                         <Label Text="IDA" TextColor="Orange" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" FontSize="Medium"></Label>

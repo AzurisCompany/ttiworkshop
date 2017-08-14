@@ -1,4 +1,5 @@
 ﻿using System;
+using Xamarin.Forms;
 
 namespace FlightApp.ViewModels
 {
@@ -11,8 +12,16 @@ namespace FlightApp.ViewModels
         public string AreaCode { get; set; }
         public string Phone { get; set; }
 
+        public Command MenuButtonCommand { get; set; }
+
         public PassengerDataViewModel()
         {
+            MenuButtonCommand = new Command(MenuButtonCommandExecute);
+        }
+
+        private async void MenuButtonCommandExecute()
+        {
+            await App.Current.MainPage.Navigation.PushAsync(new Pages.Menu());
         }
     }
 }
