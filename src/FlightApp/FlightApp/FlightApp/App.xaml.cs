@@ -7,7 +7,7 @@ namespace FlightApp
         public App()
         {
             InitializeComponent();                                  
-            MainPage = new NavigationPage(new Pages.DayFare()) { BarBackgroundColor = Color.FromHex("#e9c813") };
+            MainPage = new NavigationPage(new Pages.Menu()) { BarBackgroundColor = Color.FromHex("#e9c813") };
         }
 
         protected override void OnStart()
