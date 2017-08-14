@@ -82,7 +82,7 @@ namespace FlightApp
                 new Models.Menu(){Description = "Contato", ImageName = ImageSource.FromResource("FlightApp.Resources.menuItem6.png")}
             };
 
-            MainPage = new NavigationPage(new Pages.PassengerData());
+            MainPage = new NavigationPage(new FlightApp.Menu()) { BarBackgroundColor = Color.FromHex("#e9c813") };
         }
 
         protected override void OnStart()
