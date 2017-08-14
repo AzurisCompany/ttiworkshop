@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
 using Xamarin.Forms;
 
@@ -9,46 +6,13 @@ namespace FlightApp
 {
     public partial class App : Application
     {
-        public static IList<Models.FlightsModel> FlightsResults { get; set; }
         public static IList<Models.Menu> Menu { get; set; }
         public static IList<Models.FlightDayFare> FlightsDayFare { get; set; }
 
         public App()
         {
             InitializeComponent();
-
-            FlightsResults = new List<Models.FlightsModel>
-            {
-                new Models.FlightsModel(){
-                    OrigemDestino = "Riberirao preto (RAO) - Guarulhos (GRU)",
-                    PartidaChegada = "09:21 - 10:25 (01:04)",
-                    TipoVoo = "Voo Direto",
-                    Observacao = "Nao existem conexoes neste voo....",
-                    Valor = "BRL 112.49"
-                },
-                new Models.FlightsModel(){
-                    OrigemDestino = "Riberirao preto (RAO) - Guarulhos (GRU)",
-                    PartidaChegada = "09:21 - 10:25 (01:04)",
-                    TipoVoo = "Voo Direto",
-                    Observacao = "Nao existem conexoes neste voo....",
-                    Valor = "BRL 112.49"
-                },
-                new Models.FlightsModel(){
-                    OrigemDestino = "Riberirao preto (RAO) - Guarulhos (GRU)",
-                    PartidaChegada = "09:21 - 10:25 (01:04)",
-                    TipoVoo = "Voo Direto",
-                    Observacao = "Nao existem conexoes neste voo....",
-                    Valor = "BRL 112.49"
-                },
-                new Models.FlightsModel(){
-                    OrigemDestino = "Riberirao preto (RAO) - Guarulhos (GRU)",
-                    PartidaChegada = "09:21 - 10:25 (01:04)",
-                    TipoVoo = "Voo Direto",
-                    Observacao = "Nao existem conexoes neste voo....",
-                    Valor = "BRL 112.49"
-                }
-            };
-
+           
             FlightsDayFare = new List<Models.FlightDayFare>
             {
                 new Models.FlightDayFare
@@ -107,9 +71,7 @@ namespace FlightApp
                     Price = "112,49 BRL"
                 }
             };
-
-            MainPage = new FlightApp.FareChoose();
-            MainPage = new FlightApp.Pages.PassengerData();
+                      
             Menu = new List<Models.Menu>
             {
                 new Models.Menu(){Description = "Reservar voos", ImageName = ImageSource.FromResource("FlightApp.Resources.menuItem1.png") },
@@ -118,7 +80,7 @@ namespace FlightApp
                 new Models.Menu(){Description = "Contato", ImageName = ImageSource.FromResource("FlightApp.Resources.menuItem6.png")}
             };
 
-            MainPage = new FlightApp.Menu();
+            MainPage = new NavigationPage(new Pages.PassengerData());
         }
 
         protected override void OnStart()

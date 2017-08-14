@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using FlightApp.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,6 +10,7 @@ namespace FlightApp.Pages
         public DayFare()
         {
             InitializeComponent();
+            BindingContext = new FareByDayViewModel();
         }
     }
 }
