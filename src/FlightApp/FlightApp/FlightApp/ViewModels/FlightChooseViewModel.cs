@@ -12,7 +12,11 @@ namespace FlightApp.ViewModels
         public FlightChooseViewModel()
         {
             MenuButtonCommand = new Command(MenuButtonCommandExecute);
+            FillFlights();
+        }
 
+        private void FillFlights()
+        {
             Flights = new ObservableCollection<Models.FlightsModel>
             {
                 new Models.FlightsModel(){

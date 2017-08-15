@@ -21,7 +21,7 @@ namespace FlightApp.Pages
             switch (menu.Description)
             {
                 case "Reservar voos":
-                    await Navigation.PushAsync(new Pages.FlightChoose());
+                    await Navigation.PushAsync(new FlightSearch());
                     break;
                 case "Meus voos":
                     throw new NotImplementedException();

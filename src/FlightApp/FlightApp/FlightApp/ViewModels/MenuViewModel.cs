@@ -10,6 +10,11 @@ namespace FlightApp.ViewModels
 
         public MenuViewModel()
         {
+            FillMenu();
+        }
+
+        private void FillMenu()
+        {
             MenuList = new List<Menu>
             {
                 new Menu(){Description = "Reservar voos", ImageName = ImageSource.FromResource("FlightApp.Resources.menuItem1.png") },

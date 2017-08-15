@@ -25,7 +25,11 @@ namespace FlightApp.ViewModels
         public FareChooseViewModel()
         {
             MenuButtonCommand = new Command(MenuButtonCommandExecute);
+            FillFare();
+        }
 
+        private void FillFare()
+        {
             var fareList = new List<FareModel>();
             fareList.Add(new FareModel()
             {

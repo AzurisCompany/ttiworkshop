@@ -16,9 +16,12 @@ namespace FlightApp.ViewModels
         public DayFareViewModel()
         {
             NextButtonCommand = new Command(NextButtonCommandExecute);
-
             MenuButtonCommand = new Command(MenuButtonCommandExecute);
+            FillFlightDayFare();
+        }
 
+        private void FillFlightDayFare()
+        {
             FlightsDayFare = new ObservableCollection<FlightDayFare>
             {
                 new FlightDayFare

@@ -36,7 +36,11 @@ namespace FlightApp.ViewModels
         public SaleSummaryViewModel()
         {
             MenuButtonCommand = new Command(MenuButtonCommandExecute);
+            FillSaleSummury();
+        }
 
+        private void FillSaleSummury()
+        {
             BookingReference = "0ESYD7";
             DepartureDate = "28 julSexta-Feira";
             DepartureTime = "11:00";
