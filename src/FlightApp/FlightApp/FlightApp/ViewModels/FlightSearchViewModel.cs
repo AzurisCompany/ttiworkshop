@@ -1,12 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Xamarin.Forms;
 
 namespace FlightApp.ViewModels
 {
-    class FlightSearchViewModel
+    public class FlightSearchViewModel
     {
+        public Command FlightSearchButtonCommand { get; set; }
+
+        public Command MenuButtonCommand { get; set; }
+
+        public FlightSearchViewModel()
+        {
+            FlightSearchButtonCommand = new Command(FlightSearchButtonCommandExecute);
+            MenuButtonCommand = new Command(MenuButtonCommandExecute);
+        }
+
+        private async void MenuButtonCommandExecute()
+        {
+            await App.Current.MainPage.Navigation.PushAsync(new Pages.Menu());
+        }
+
+        private async void FlightSearchButtonCommandExecute()
+        {
+            await App.Current.MainPage.Navigation.PushAsync(new Pages.DayFare());
+        }
     }
 }

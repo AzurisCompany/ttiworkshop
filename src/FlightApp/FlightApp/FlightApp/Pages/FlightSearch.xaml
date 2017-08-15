@@ -1,9 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FlightApp.Extensions;assembly:FlightApp"
              x:Class="FlightApp.Pages.FlightSearch">
     <ContentPage.Content>
         <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+            <StackLayout Orientation="Horizontal" BackgroundColor="White" Padding="10">
+                <Image Source="{local:ImageResource FlightApp.Resources.logo.png}" HorizontalOptions="StartAndExpand"/>
+                <Button Text="Menu" TextColor="Black" WidthRequest="100" Command="{Binding MenuButtonCommand}"></Button>
+            </StackLayout>
+
             <StackLayout Orientation="Horizontal">
                 <Button x:Name="btIda" WidthRequest="150" BackgroundColor="White" TextColor="Gold" Text="Apenas ida" HorizontalOptions="StartAndExpand"></Button>
                 <Button x:Name="btIdaEVolta" WidthRequest="150" BackgroundColor="LightGray" TextColor="Gray" Text="Ida e volta" HorizontalOptions="EndAndExpand"></Button>
@@ -37,7 +44,7 @@
             </StackLayout>
 
             <StackLayout Orientation="Horizontal">
-                <Button Text="Pesquisar" TextColor="White" BackgroundColor="Gold" HorizontalOptions="FillAndExpand"></Button>
+                <Button Text="Pesquisar" TextColor="White" BackgroundColor="Gold" HorizontalOptions="FillAndExpand" Command="{Binding FlightSearchButtonCommand}"></Button>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
